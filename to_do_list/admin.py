@@ -3,11 +3,11 @@ from .models import Tarefa
 
 
 class Tarefas(admin.ModelAdmin):
-    list_display = ("id", "titulo", "data", "status")
+    list_display = ("id", "titulo", "data", "concluida")
     list_display_links = ("id", "titulo")
     search_fields = ("titulo", )
-    list_editable = ('status', )
-    list_filter = ('status',)
+    list_editable = ('concluida', )
+    list_filter = ('concluida',)
     list_per_page = 10
 
 
