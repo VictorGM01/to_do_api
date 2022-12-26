@@ -32,3 +32,13 @@ class TestTarefas(APITestCase):
 
         self.assertEqual(resposta_get.status_code, status.HTTP_200_OK)
         self.assertEqual(titulo, resposta_get.data["titulo"])
+
+    def test_deve_permitir_atualizar_o_conteudo_via_metodo_patch(self):
+        resposta_post = self.client.post("/tarefas/", self.tarefa)
+
+        patch = self.client.patch(f"/tarefas/{resposta_post.data['id']}/",
+                                  {"titulo": "Nova Tarefa Teste"})
+        self.assertEqual(patch.status_code, status.HTTP_200_OK)
+
+        tarefa_atualizada = Tarefa.objects.get(id=resposta_post.data['id'])
+        self.assertEqual(tarefa_atualizada.titulo, "Nova Tarefa Teste")
