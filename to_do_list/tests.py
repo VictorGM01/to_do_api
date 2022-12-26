@@ -18,3 +18,8 @@ class TestTarefas(APITestCase):
     def test_deve_incluir_conteudo_via_metodo_post(self):
         resposta = self.client.post("/tarefas/", self.tarefa)
         self.assertEqual(resposta.status_code, status.HTTP_201_CREATED)
+
+    def test_deve_retornar_o_mesmo_valor_de_contagem_dos_objetos_apos_inclusao(self):
+        quantidade_inicial = Tarefa.objects.all().count()
+        self.client.post("/tarefas/", self.tarefa)
+        self.assertEqual(Tarefa.objects.all().count(), quantidade_inicial + 1)
