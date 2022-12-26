@@ -23,3 +23,12 @@ class TestTarefas(APITestCase):
         quantidade_inicial = Tarefa.objects.all().count()
         self.client.post("/tarefas/", self.tarefa)
         self.assertEqual(Tarefa.objects.all().count(), quantidade_inicial + 1)
+
+    def test_deve_retornar_o_mesmo_conteudo_do_objeto_incluido(self):
+        resposta_post = self.client.post("/tarefas/", self.tarefa)
+        titulo = resposta_post.data["titulo"]
+
+        resposta_get = self.client.get(f"/tarefas/{resposta_post.data['id']}/")
+
+        self.assertEqual(resposta_get.status_code, status.HTTP_200_OK)
+        self.assertEqual(titulo, resposta_get.data["titulo"])
