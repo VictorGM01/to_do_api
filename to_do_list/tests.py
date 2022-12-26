@@ -48,3 +48,17 @@ class TestTarefas(APITestCase):
 
         delete = self.client.delete(f"/tarefas/{resposta_post.data['id']}/")
         self.assertEqual(delete.status_code, status.HTTP_204_NO_CONTENT)
+
+    def test_deve_retornar_zero_como_resultado_da_contagem_dos_objetos_apos_exclusao(self):
+        resposta_post = self.client.post("/tarefas/", self.tarefa)
+        quantidade_inicial = Tarefa.objects.all().count()
+
+        # Quantidade inicial tem que ser maior que zero e igual a um,
+        # pois uma tarefa acaba de ser adicionada
+        self.assertGreater(quantidade_inicial, 0)
+        self.assertEqual(quantidade_inicial, 1)
+
+        self.client.delete(f"/tarefas/{resposta_post.data['id']}/")
+
+        # Após a exclusão, é notório que a quantidade precisa ser zero
+        self.assertEqual(Tarefa.objects.all().count(), 0)
