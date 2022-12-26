@@ -42,3 +42,9 @@ class TestTarefas(APITestCase):
 
         tarefa_atualizada = Tarefa.objects.get(id=resposta_post.data['id'])
         self.assertEqual(tarefa_atualizada.titulo, "Nova Tarefa Teste")
+
+    def test_deve_permitir_deletar_um_objeto(self):
+        resposta_post = self.client.post("/tarefas/", self.tarefa)
+
+        delete = self.client.delete(f"/tarefas/{resposta_post.data['id']}/")
+        self.assertEqual(delete.status_code, status.HTTP_204_NO_CONTENT)
