@@ -1,6 +1,17 @@
 # To Do List API
 ![Capa](https://user-images.githubusercontent.com/86068797/209870423-3ba162d9-78d9-4e51-b5e2-c2ccd6424508.png)
 
+<p align="center">
+ <a href="#descrição-do-projeto-">Descrição</a> •
+ <a href="#estrutura-de-pastas-%EF%B8%8F">Pastas</a> • 
+ <a href="#demonstração-da-aplicação-">Demonstração</a> • 
+ <a href="#funcionalidades-%EF%B8%8F">Funcionalidades</a> • 
+ <a href="#status-do-projeto-">Status</a> • 
+ <a href="#como-usar-a-aplicação-">Como Usar</a> • 
+ <a href="#tecnologias-%EF%B8%8F">Tecnologias</a> • 
+ <a href="#desenvolvedor-octocat">Desenvolvedor</a>
+</p>
+
 ## Descrição do Projeto 📋
 Esta é uma API desenvolvida com o Django Rest Framework, a qual funciona como uma lista de tarefas (to do list).
 Nesse viés, tal API possibilita a criação de tarefas com os seguintes campos: título, descrição, data de
