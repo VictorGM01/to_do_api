@@ -38,3 +38,16 @@ Ademais, há duas pastas, as quais estão organizadas do seguinte modo:
 > Listagem das tarefas - get /tarefas/
 
 <img src="https://user-images.githubusercontent.com/86068797/209858766-75770773-f536-4f9d-8852-956e52d6ef84.png" alt="imagem com o conteúdo listado a partir do método get" title="Listagem das tarefas via GET">
+
+## Funcionalidades ⚙️
+
+- [x] Criar tarefas com os campos:
+  - [x] Título
+  - [x] Data de Conclusão
+  - [x] Status da Tarefa
+  - [x] Descrição
+- [x] Manipular as tarefas criadas:
+  - [x] Listar todas
+  - [x] Listar por ID
+  - [x] Atualizar
+  - [x] Deletar
