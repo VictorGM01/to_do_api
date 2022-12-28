@@ -51,3 +51,6 @@ Ademais, há duas pastas, as quais estão organizadas do seguinte modo:
   - [x] Listar por ID
   - [x] Atualizar
   - [x] Deletar
+
+## Status do Projeto 🔔
+#### 🚧 Em construção 🚧
