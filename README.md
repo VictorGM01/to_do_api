@@ -29,3 +29,12 @@ Ademais, há duas pastas, as quais estão organizadas do seguinte modo:
 
 * config: pasta do *django project*, responsável por organizar todos os arquivos de configuração do projeto;
 * to_do_list: pasta do *django app*, responsável por organizar os arquivos relacionados ao aplicativo das tarefas.
+
+## Demonstração da Aplicação 💻
+> Dados para a inclusão de uma tarefa - post
+
+<img src="https://user-images.githubusercontent.com/86068797/209858395-8e87eb76-bf26-48c2-a279-6f0c7a55fe6a.png" alt="imagem com o conteúdo necessário para a inclusão de uma tarefa" title="Conteúdo necessário para a inclusão de uma tarefa">
+
+> Listagem das tarefas - get /tarefas/
+
+<img src="https://user-images.githubusercontent.com/86068797/209858766-75770773-f536-4f9d-8852-956e52d6ef84.png" alt="imagem com o conteúdo listado a partir do método get" title="Listagem das tarefas via GET">
