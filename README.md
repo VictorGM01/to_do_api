@@ -88,3 +88,11 @@ python manage.py createsuperuser
 # Rode o servidor
 python manage.py runserver
 ```
+
+## Tecnologias 🛠️
+As seguintes ferramentas foram usadas na construção do projeto:
+
+* [**Python**](https://www.python.org/downloads/release/python-399/)
+* [**Django**](https://www.djangoproject.com/)
+* [**Django Rest Framework**](https://www.django-rest-framework.org/)
+* [**SQLite**](https://www.sqlite.org/index.html)
