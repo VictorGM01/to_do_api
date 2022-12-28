@@ -1,4 +1,5 @@
 # To Do List API
+![Capa](https://user-images.githubusercontent.com/86068797/209870423-3ba162d9-78d9-4e51-b5e2-c2ccd6424508.png)
 
 ## Descrição do Projeto 📋
 Esta é uma API desenvolvida com o Django Rest Framework, a qual funciona como uma lista de tarefas (to do list).
@@ -53,7 +54,7 @@ Ademais, há duas pastas, as quais estão organizadas do seguinte modo:
   - [x] Deletar
 
 ## Status do Projeto 🔔
-#### 🚧 Em construção 🚧
+#### 🚧 Em construção 🚧 
 
 ## Como Usar a Aplicação 🚀
 
