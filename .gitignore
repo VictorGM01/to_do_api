@@ -1,3 +1,8 @@
+# Fly.io
+.dockerignore
+Dockerfile
+fly.toml
+
 # IDE
 .idea/
 idea/
