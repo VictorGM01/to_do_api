@@ -25,6 +25,7 @@ CORS_ALLOW_ALL_ORIGINS = True
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -126,3 +127,18 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+JAZZMIN_SETTINGS = {
+    "site_title": "To Do List",
+    "site_header": "To Do List API",
+    "site_brand": "To Do List API",
+    "welcome_sign": "Welcome to the To Do List API",
+    "copyright": "Victor Gabriel Marques",
+    "topmenu_links": [
+        {"name": "Home",  "url": "admin:index", "permissions": ["auth.view_user"]},
+
+        {"name": "Documentação", "url": "https://github.com/VictorGM01/to_do_api#to-do-list-api", "new_window": True},
+
+        {"app": "to_do_list"},
+    ],
+}
