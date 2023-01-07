@@ -7,7 +7,7 @@
  <a href="#demonstração-da-aplicação-">Demonstração</a> • 
  <a href="#funcionalidades-%EF%B8%8F">Funcionalidades</a> • 
  <a href="#status-do-projeto-">Status</a> • 
- <a href="#como-usar-a-aplicação-">Como Usar</a> • 
+ <a href="#como-rodar-a-aplicação-">Como Rodar</a> • 
  <a href="#tecnologias-%EF%B8%8F">Tecnologias</a> • 
  <a href="#desenvolvedor-octocat">Desenvolvedor</a>
 </p>
@@ -69,7 +69,7 @@ Ademais, há duas pastas, as quais estão organizadas do seguinte modo:
 ## Status do Projeto 🔔
 #### 🚧 Em Aprimoramento 🚧 
 
-## Como Usar a Aplicação 🚀
+## Como Rodar a Aplicação 🚀
 
 ### Pré-requisitos 📦
 Antes de começar, é preciso que você tenha as seguintes ferramentas instaladas em sua máquina:
