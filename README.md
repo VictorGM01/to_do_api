@@ -91,7 +91,13 @@ python -m venv .venv
 .venv\Scripts\activate
 
 # Instale as dependências
-pip install django djangorestframework
+pip install -r requirements.txt
+
+# Defina as variáveis de ambiente
+# Crie, na raíz do projeto, um arquivo chamado .env
+# Neste arquivo, defina as seguintes variáveis:
+SECRET_KEY="cole-sua-chave-aqui"
+DEBUG="1"
 
 # Realize as migrações
 python manage.py migrate
