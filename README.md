@@ -67,7 +67,7 @@ Ademais, há duas pastas, as quais estão organizadas do seguinte modo:
   - [x] Deletar
 
 ## Status do Projeto 🔔
-#### 🚧 Em construção 🚧 
+#### 🚧 Em Aprimoramento 🚧 
 
 ## Como Usar a Aplicação 🚀
 
