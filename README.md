@@ -132,6 +132,8 @@ As seguintes ferramentas foram usadas na construção do projeto:
 * [**Django**](https://www.djangoproject.com/)
 * [**Django Rest Framework**](https://www.django-rest-framework.org/)
 * [**SQLite**](https://www.sqlite.org/index.html)
+* [**Fly**](https://fly.io/docs/)
+* [**Jazzmin**](https://django-jazzmin.readthedocs.io/)
 
 ## Desenvolvedor :octocat:
 [<img src="https://avatars.githubusercontent.com/u/86068797?s=400&u=043c0b1479770ac997f0cf5a31c986a2815ce810&v=4" width=100><br><sub> <strong>Victor G. Marques</strong> </sub>](https://github.com/VictorGM01)
