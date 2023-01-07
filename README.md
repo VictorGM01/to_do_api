@@ -7,7 +7,7 @@
  <a href="#demonstração-da-aplicação-">Demonstração</a> • 
  <a href="#funcionalidades-%EF%B8%8F">Funcionalidades</a> • 
  <a href="#status-do-projeto-">Status</a> • 
- <a href="#como-usar-a-aplicação-">Como Usar</a> • 
+ <a href="#como-rodar-a-aplicação-">Como Rodar</a> • 
  <a href="#tecnologias-%EF%B8%8F">Tecnologias</a> • 
  <a href="#desenvolvedor-octocat">Desenvolvedor</a>
 </p>
@@ -31,16 +31,18 @@ conclusão e status de conclusão. Além de criar, também é possível listar, 
         &emsp;&emsp; └── migrations <br>
     ├ manage.py <br>
     ├ README.md <br>
+    ├ requirements.txt <br>
 
-Na pasta raiz, há dois arquivos principais:
+Na pasta raiz, há três arquivos **principais**:
 
-* README.md: guia sobre os aspectos do projeto
-* manage.py: *script* que auxilia na gestão da API
+* **README.md**: guia sobre os aspectos do projeto
+* **manage.py**: *script* que auxilia na gestão da API
+* **requirements.txt**: requisitos para rodar a aplicação
 
 Ademais, há duas pastas, as quais estão organizadas do seguinte modo:
 
-* config: pasta do *django project*, responsável por organizar todos os arquivos de configuração do projeto;
-* to_do_list: pasta do *django app*, responsável por organizar os arquivos relacionados ao aplicativo das tarefas.
+* **config/**: pasta do *django project*, responsável por organizar todos os arquivos de configuração do projeto;
+* **to_do_list/**: pasta do *django app*, responsável por organizar os arquivos relacionados ao aplicativo das tarefas.
 
 ## Demonstração da Aplicação 💻
 > Dados para a inclusão de uma tarefa - post
@@ -65,9 +67,9 @@ Ademais, há duas pastas, as quais estão organizadas do seguinte modo:
   - [x] Deletar
 
 ## Status do Projeto 🔔
-#### 🚧 Em construção 🚧 
+#### 🚧 Em Aprimoramento 🚧 
 
-## Como Usar a Aplicação 🚀
+## Como Rodar a Aplicação 🚀
 
 ### Pré-requisitos 📦
 Antes de começar, é preciso que você tenha as seguintes ferramentas instaladas em sua máquina:
@@ -89,7 +91,13 @@ python -m venv .venv
 .venv\Scripts\activate
 
 # Instale as dependências
-pip install django djangorestframework
+pip install -r requirements.txt
+
+# Defina as variáveis de ambiente
+# Crie, na raíz do projeto, um arquivo chamado .env
+# Neste arquivo, defina as seguintes variáveis:
+SECRET_KEY="cole-sua-chave-aqui"
+DEBUG="1"
 
 # Realize as migrações
 python manage.py migrate
@@ -101,6 +109,22 @@ python manage.py createsuperuser
 python manage.py runserver
 ```
 
+### Rodando os Testes da API ✅
+```bash
+# Após seguir os passos anteriores, certifique-se de estar na raíz do projeto
+cd to_do_api
+
+# Para rodar todos os testes, execute:
+python manage.py test
+
+# Para rodar somente os testes das tarefas, execute:
+python manage.py test to_do_list
+
+# Para rodar um método em específico, execute:
+python manage.py test to_do_list.tests.TestTarefas.digite_o_nome_do_metodo_aqui
+# Ex.: python manage.py test to_do_list.tests.TestTarefas.test_deve_retornar_status_code_200_no_metodo_get
+```
+
 ## Tecnologias 🛠️
 As seguintes ferramentas foram usadas na construção do projeto:
 
@@ -108,6 +132,8 @@ As seguintes ferramentas foram usadas na construção do projeto:
 * [**Django**](https://www.djangoproject.com/)
 * [**Django Rest Framework**](https://www.django-rest-framework.org/)
 * [**SQLite**](https://www.sqlite.org/index.html)
+* [**Fly**](https://fly.io/docs/)
+* [**Jazzmin**](https://django-jazzmin.readthedocs.io/)
 
 ## Desenvolvedor :octocat:
 [<img src="https://avatars.githubusercontent.com/u/86068797?s=400&u=043c0b1479770ac997f0cf5a31c986a2815ce810&v=4" width=100><br><sub> <strong>Victor G. Marques</strong> </sub>](https://github.com/VictorGM01)
