@@ -109,6 +109,22 @@ python manage.py createsuperuser
 python manage.py runserver
 ```
 
+### Rodando os Testes da API ✅
+```bash
+# Após seguir os passos anteriores, certifique-se de estar na raíz do projeto
+cd to_do_api
+
+# Para rodar todos os testes, execute:
+python manage.py test
+
+# Para rodar somente os testes das tarefas, execute:
+python manage.py test to_do_list
+
+# Para rodar um método em específico, execute:
+python manage.py test to_do_list.tests.TestTarefas.digite_o_nome_do_metodo_aqui
+# Ex.: python manage.py test to_do_list.tests.TestTarefas.test_deve_retornar_status_code_200_no_metodo_get
+```
+
 ## Tecnologias 🛠️
 As seguintes ferramentas foram usadas na construção do projeto:
 
