@@ -46,3 +46,10 @@ def login(request):
 
         else:
             return Response({'status': 'usuário não encontrado'}, status=status.HTTP_404_NOT_FOUND)
+
+
+@api_view(['GET'])
+def logout(request):
+    """Encerra a sessão do usuário no sistema"""
+    auth.logout(request)
+    return Response({'status': 'logout efetuado'}, status=status.HTTP_200_OK)
