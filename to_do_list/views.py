@@ -6,5 +6,11 @@ from rest_framework.permissions import IsAuthenticated
 
 class TarefaViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticated]
-    queryset = Tarefa.objects.all()
     serializer_class = TarefaSerializer
+
+    def get_queryset(self):
+        queryset = Tarefa.objects.all()
+        username = self.request.user
+        if username is not None:
+            queryset = queryset.filter(autor=username)
+        return queryset
