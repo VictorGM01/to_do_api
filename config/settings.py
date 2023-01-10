@@ -18,7 +18,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = os.getenv('DEBUG', '0').lower() in ['true', 't', '1']
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'to-do-list-api.fly.dev']
-CSRF_TRUSTED_ORIGINS = ['https://to-do-list-api.fly.dev', 'https://*.github.io']
+CSRF_TRUSTED_ORIGINS = ['https://to-do-list-api.fly.dev', 'https://*.github.io', 'http://127.0.0.1']
 CORS_ALLOW_ALL_ORIGINS = True
 
 
@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'to_do_list',
+    'users',
 ]
 
 MIDDLEWARE = [
